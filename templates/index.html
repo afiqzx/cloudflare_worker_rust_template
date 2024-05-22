@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+
+    {% block content %}
+    <h1>Welcome</h1>
+    <p>This cloudflare worker is a rust program compiled to webassembly. The pages are minijinja template embed into the program itself using <code>include_str!()</code> macro.</p>
+    <p>It is looking good.</p>
+    {% endblock %}
+</body>
+
+</html>
