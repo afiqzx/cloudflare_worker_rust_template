@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html>
 
-<body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-        </ul>
-    </nav>
 
-    {% block content %}
-    <h1>Welcome</h1>
-    <p>This cloudflare worker is a rust program compiled to webassembly. The pages are minijinja template embed into the program itself using <code>include_str!()</code> macro.</p>
-    <p>It is looking good.</p>
-    {% endblock %}
+<head>
+    <script src="https://unpkg.com/htmx.org@1.9.12"
+        integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/output.css"></link>
+</head>
+
+<body>
+    <div class="self-center">
+        <nav>
+            <div class="flex-row">
+                <a class="" href="/">Home</a>
+                <a class="" href="/about">About</a>
+            </div>
+        </nav>
+
+        {% block content %}
+        <h1>Welcome</h1>
+        <p class="bg-black text-white">This cloudflare worker is a rust program compiled to webassembly. The pages are minijinja template
+            embed
+            into the program itself using <code>include_str!()</code> macro.</p>
+        <p>It is looking good.</p>
+        {% endblock %}
+    </div>
 </body>
 
 </html>

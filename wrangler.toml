@@ -1,6 +1,7 @@
-name = "personal_blog"
+name = "website"
 main = "build/worker/shim.mjs"
 compatibility_date = "2024-05-22"
 
 [build]
-command = "cargo install -q worker-build && worker-build --release"
+command = "cargo install -q worker-build && npx tailwindcss -i ./css/input.css -o ./css/output.css && worker-build --release"
+watch_dir = [ "src", "templates" ]

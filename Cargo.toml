@@ -1,15 +1,17 @@
 [package]
-name = "personal_blog"
+name = "website"
 version = "0.1.0"
 edition = "2021"
 authors = [ "Mohammad Afiq <46773936+afiqzx@users.noreply.github.com>" ]
 
 [package.metadata.release]
 release = false
+#release = true
 
 # https://github.com/rustwasm/wasm-pack/issues/1247
 [package.metadata.wasm-pack.profile.release]
 wasm-opt = false
+#wasm-opt = [ '-O4' ]
 
 [lib]
 crate-type = ["cdylib"]
