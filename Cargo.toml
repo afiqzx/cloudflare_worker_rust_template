@@ -2,7 +2,7 @@
 name = "website"
 version = "0.1.0"
 edition = "2021"
-authors = [ "Mohammad Afiq <46773936+afiqzx@users.noreply.github.com>" ]
+authors = [ "Someone <some_email@users.noreply.github.com>" ]
 
 [package.metadata.release]
 release = false
